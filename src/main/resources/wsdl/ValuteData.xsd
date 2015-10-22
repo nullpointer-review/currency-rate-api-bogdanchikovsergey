@@ -1,0 +1,21 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ValuteData">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ValuteCursOnDate" maxOccurs="unbounded" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element type="xs:string" name="Vname"/>
+                            <xs:element type="xs:short" name="Vnom"/>
+                            <xs:element type="xs:float" name="Vcurs"/>
+                            <xs:element type="xs:short" name="Vcode"/>
+                            <xs:element type="xs:string" name="VchCode"/>
+                        </xs:sequence>
+                        <xs:attribute ref="urn:id" xmlns:urn="urn:schemas-microsoft-com:xml-diffgram-v1"/>
+                        <xs:attribute ref="urn:rowOrder" xmlns:urn="urn:schemas-microsoft-com:xml-msdata"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
